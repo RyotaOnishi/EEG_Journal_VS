@@ -1,0 +1,101 @@
+\relax 
+\citation{WHO}
+\citation{Deburchgraeve2008,Subasi2005,kellaway1979precise,Panzica1999,fusco1993ictal,Acir2005,Greene2008}
+\citation{Deburchgraeve2008}
+\citation{Subasi2005}
+\citation{Saunders1963,Gonen2012,Campbell1967,Weiss1973,Nurujjaman2009,Charles1999}
+\citation{Saunders1963,Gonen2012}
+\citation{Campbell1967}
+\citation{Gonen2012,Weiss1973,Nurujjaman2009,Charles1999}
+\citation{Nurujjaman2009,Charles1999}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}\protected@file@percent }
+\citation{t2006}
+\citation{t2006}
+\citation{Models1998}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Methods}{2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Multivariate Scale Mixture Model of Scalp EEG Signals}{2}\protected@file@percent }
+\newlabel{eq:gauss_x}{{1}{2}}
+\newlabel{eq:p_sigma}{{2}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Graphical representation of the proposed multivariate scale mixture model, which describes the stochastic relationship between EEG signals and its variance-covariance matrix. The white nodes are random variables and the black nodes are parameters to be estimated. In the model, an EEG signal $\mathbf  {x} \in \mathbb  {R}^{D}$ is handled as a random variable that follows a multivariate Gaussian distribution with a mean vector of $\mathbf  {0}$ and a variance-covariance matrix $\mathbf  {\Sigma } \in \mathbb  {R}^{D \times D}$ which is also a random variable following the inverse Wishart distribution determined by the degrees of freedom $\nu \in \mathbb  {R}^+$ and the scale matrix $\mathbf  {\Psi } \in \mathbb  {R}^{D \times D}$. The parameter $\nu $ represents stochastic fluctuations of EEG signals. The variance-covariance matrix distribution parameters are estimated via marginal likelihood maximization from recorded EEG signals.}}{2}\protected@file@percent }
+\newlabel{fig:model}{{1}{2}}
+\newlabel{eq:marginal_x}{{3}{2}}
+\newlabel{eq:p_x}{{4}{2}}
+\citation{t2006}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Parameter Estimation Based on Marginal Maximum Likelihood}{3}\protected@file@percent }
+\newlabel{eq:eq6}{{6}{3}}
+\newlabel{eq:eq7}{{7}{3}}
+\newlabel{eq:eq8}{{8}{3}}
+\newlabel{eq:eq9}{{9}{3}}
+\newlabel{eq:eq11}{{11}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}Proposed EEG Analysis Methods}{3}\protected@file@percent }
+\citation{GeneHowardGolub2013}
+\citation{ep1994}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Overview of the proposed analysis method. The recorded EEG signals are decomposed into multiple frequency bands ($b_1$--$b_M$) by using a filter bank consisting of parallel band-pass filters. The evaluation index $1/\nu $ is then calculated for each frequency band, based on the parameter estimation results of the proposed model. The results are shown as a color map.}}{4}\protected@file@percent }
+\newlabel{fig:system}{{2}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces International 10--20 electrode montage}}{4}\protected@file@percent }
+\newlabel{fig:electrodes}{{3}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Experiments}{4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Simulation}{4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}EEG analysis}{4}\protected@file@percent }
+\citation{Schwarz1978}
+\citation{Hamedi2014}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Patient conditions}}{5}\protected@file@percent }
+\newlabel{table:conditions}{{I}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Examples of artificially generated EEG signals ($D$ = 4) with $\nu _0$ set to (a) $\nu _0 = 5.0$, (b) $\nu _0 = 8.0$, and (c) $\nu _0 = 13.0$; in each case, ${{\psi _0}_{ii}}$ was set to ${{\psi _0}_{ii}} = 10.0$, ${{\psi _0}_{ii}} = 20.0$, and ${{\psi _0}_{ii}} = 40.0$.}}{5}\protected@file@percent }
+\newlabel{fig:sim_EEG}{{4}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Results}{5}\protected@file@percent }
+\citation{Parzen1962}
+\citation{Hedges1981}
+\citation{Cohen2013}
+\citation{Delong1988}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Average absolute percentage errors for each combination of the number of input dimensions ($D$) and the sliding window length ($W$) in the estimation of variance-covariance distribution parameters. (a) Degrees of freedom $\nu $. (b) Scale matrix $\mathbf  {\Psi }$.}}{6}\protected@file@percent }
+\newlabel{fig:ES_param}{{5}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Discussion}{6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Raw EEG signals and corresponding analysis results from the proposed method for (a) patient A and (b) patient B. Proposed index $1/\nu $ was normalized based on min-max normalization, rescaling the range of features to scale the range in [0, 1]. }}{7}\protected@file@percent }
+\newlabel{fig:Colormap}{{6}{7}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Percentage of times each model was selected for different frequency bands based on BIC.}}{7}\protected@file@percent }
+\newlabel{table:BIC}{{II}{7}}
+\citation{Kobayashi2004,Kobayashi2009,Benedek2016}
+\citation{Park2012}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Experimental $1/\nu $ distributions estimated from EEG signals. The \textit  {p}-value from the paired $t$-test and the effect size \textit  {g} are also shown. (a) $\gamma $ band. (b) $\beta $ band. (c) $\alpha $ band. (d) $\theta $ band. (e) $\delta $ band.}}{8}\protected@file@percent }
+\newlabel{fig:dens}{{7}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Results of ROC analysis based on $1/\nu $ for each frequency band and RMS. (a) ROC curves for seizure and non-seizure segments. (b) Calculated AUC for seizure and non-seizure segments. The pairwise comparisons between RMS and the other results based on the Delong's test for two correlated ROC curves with the Holm adjustment are also shown ($p<0.001$).}}{8}\protected@file@percent }
+\newlabel{fig:roc}{{8}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{8}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces AUC of all features for different frequency bands.}}{9}\protected@file@percent }
+\newlabel{table:AUC}{{III}{9}}
+\@writefile{toc}{\contentsline {section}{Appendix: Equivalent expression for multivariate scale mixture model}{9}\protected@file@percent }
+\newlabel{eq:20}{{20}{9}}
+\bibstyle{IEEEtran}
+\bibdata{ref.bib}
+\bibcite{WHO}{1}
+\bibcite{Deburchgraeve2008}{2}
+\bibcite{Subasi2005}{3}
+\bibcite{kellaway1979precise}{4}
+\bibcite{Panzica1999}{5}
+\bibcite{fusco1993ictal}{6}
+\bibcite{Acir2005}{7}
+\bibcite{Greene2008}{8}
+\bibcite{Saunders1963}{9}
+\bibcite{Gonen2012}{10}
+\bibcite{Campbell1967}{11}
+\bibcite{Weiss1973}{12}
+\bibcite{Nurujjaman2009}{13}
+\bibcite{Charles1999}{14}
+\bibcite{t2006}{15}
+\bibcite{Models1998}{16}
+\bibcite{GeneHowardGolub2013}{17}
+\bibcite{ep1994}{18}
+\bibcite{Schwarz1978}{19}
+\bibcite{Hamedi2014}{20}
+\bibcite{Parzen1962}{21}
+\bibcite{Hedges1981}{22}
+\bibcite{Cohen2013}{23}
+\bibcite{Delong1988}{24}
+\bibcite{Kobayashi2004}{25}
+\bibcite{Kobayashi2009}{26}
+\bibcite{Benedek2016}{27}
+\bibcite{Park2012}{28}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces The average computation time and its standard error of the proposed index $1/\nu $. The sample length took 7500 ($W$=15), and the nmber of dimensions took $D$=19 by changing the number of cores 1--5.}}{10}\protected@file@percent }
+\newlabel{fig:c_time}{{9}{10}}
+\@writefile{toc}{\contentsline {section}{References}{10}\protected@file@percent }
