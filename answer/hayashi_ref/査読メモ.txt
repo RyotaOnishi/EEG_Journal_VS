@@ -1,0 +1,101 @@
+[Reviewer 1]
+1. #Confusion of x and x_t -> Define variables clearly.■
+2. #Conflictoin of (12) and (19). Mistake in equation?■
+3. *Necessity of signal processing. Estimation result from raw EMG directly using Bayes' rules.■
+4. *Tuning of shape parameter.■
+5. Meaning of error bars.■
+6. *Force estimation should be conducted and should be compared with MLE.■
+7. The reason why down-sampling is conducted after smoothing.■
+8. Meaning of three simulated signals.■
+9. *L bigger than 1000.■
+10. More subjects.■
+
+[Reviewer 2]
+1. Relationship to Laplacian distribution.■
+2. Discussion in terms of signal-dependent noise.■
+3. *Tracking experiments.■
+4. %s are unnecessary.■
+
+[Reviewer 3]
+1. What is the rationale for adding noise to the variance?■
+2. Compare with the case where noise is added directly to the signal and discuss the justification and consequences of the model assumption.○
+　→ そもそも信号強度依存ノイズとは，本モデルでは分散の確率的挙動の大きさと捉える，different from electric noise
+　→ 仮定しているのは，分散分布とα一定のみ．筋力に応じて増加する点と，尖度が現れる点の一致性．
+　→ 直接信号にノイズを加えると正規分布にしかならない．
+3. *Estimation performance using real EMG signals.■
+4. Simplify paper structure and describe model limitation.■
+5. The reason why the proposed method superior to MLE.■
+6. Some figures are small.■
+sc1. Add references. ■
+sc2. How is alpha set?■
+sc3. [] for units are not needed.■
+sc4. Explanation of empirical Bayes.■
+sc5. Definition of error rate.■
+sc6. EMG -> simulated EMG. ■
+sc7. Details of EMG recording. ■
+sc8. Details of muscle force estimation.■
+sc9. Window for Fig. 7.■
+sc10. More comprehensive discussion.■
+
+[TODO]■完了，□未完了
+■分散分布推定式導出の誤り修正，
+■修正式を用いた全実験のやり直し，
+■人工データ実験における周辺尤度最大化法（整流平滑化を使わない方法）との比較，
+■逆ガンマ分布パラメータ真値変更レンジを拡大して再実験，
+■推定窓幅変更レンジの拡大，
+■計測筋電を用いた実験における最尤法との比較，
+■被験者追加，
+■筋力推定における最尤法に対する優位性の考察，
+■筋力を動的に変化させた際のシミュレーション，
+■信号強度依存ノイズに対するより深い考察，
+■論文構成の変更
+
+proposed model/methodの表記を統一
+
+＜生筋電実験＞
+1. 分散分布平均/分散 - 筋力折れ線グラフ（被験者A）および多重比較．
+2. 分散分布pdf
+3. （文中のみ）被験者ごとの分散分析　→　全被験者？で筋力の増加に伴って分散分布が有意に増加．
+4. 全被験者の分散分布平均/分散 - 筋力回帰分析（対数モデル）
+5. (文中およびキャプション)MLとの残差F検定
+
+＜考察＞
+近似の妥当性
+MLより少ないサンプル数で分散分布パラメータを推定できる
+→MLはサンプル数が少ないとき外れ値やサンプルの偏りに鋭敏になる一方，提案法はsmoothingにより多少外れ値が入ってもその影響が減らされる
+パラメータを設定すればトラッキングできる
+筋力に応じて分散平均，分散分散増加
+筋力に対する回帰はMLより良い
+
+ラプラス分布との関連（t分布とからめて）
+→ 筋電信号そのものを自由度固定のt分布で表現していることと等価
+→ 筋電は正規とラプラスの間？筋力が弱いとラプラスに近くなる？いずれにせよ尖度>0，自由度が尖度の定義域を下回ることはなかった．
+　 → 結果にαの推定値を追記しておく．
+信号強度依存ノイズとの関連
+→ 分散を逆ガンマに従う確率変数とし，各時刻において変動すると仮定すると，分散標準偏差が分散平均の二乗に比例することが導出される→Harris, Jonesとの関係
+→ 当然筋力に応じて分散平均，分散分散も上昇，predictorとしても使える
+分散にノイズを付加することの理論的意味
+→ 筋電そのものにノイズを付加すると分散が付加された正規分布となる
+
+提案モデルは筋電の分散にノイズが重畳することで分散は時刻ごとに異なる確率変数になることと，
+推定において分散分布はα固定の逆ガンマ分布であることを仮定している．
+これらから導かれる2つの性質は，従来研究と密接な関係を持つ．
+1つ目は信号強度依存ノイズとの関係．Harrisらは..., Jonesらは...提案モデル(16)式．筋力推定に使えるかもしれん実利的な性質．
+2つ目は観測される筋電位信号の分布に関する性質．Hogan and Mannは正規分布を仮定しているが必ずしもそうではなさそう．
+○○らは．．．（尖度との関係）
+もし分散ではなく筋電信号自体にノイズを加えるとそれは正規分布だが，
+提案モデルでは分散にノイズを加えることで，結果的にt分布になる．
+提案モデルは（0ではない）固定された尖度を持つt分布で筋電の周辺分布をモデル化し，筋力に応じてその分散が変化するとしていることと結果的に等価．
+
+limitation
+筋電信号の確率的特徴をモデル化したものであり，筋電の発生メカニズムそのものをモデル化したわけではないこと
+精度良くトラッキングするには適切なパラメータ設定が必要
+
+英文校正
+論文doc化＆未変更部削除
+回答書はmodificationをまだ作らずにletterとanswerのみで
+
+校正提出中
+引用文献フォーマット合わせ
+図中の文字サイズ調整
+modificationの項目作成

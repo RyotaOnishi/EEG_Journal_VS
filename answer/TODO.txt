@@ -1,0 +1,93 @@
+査読コメント
+
+Associate Editor and Editorial Board comments
+==============================
+Both expert reviewers found merit in the work. However, they also raised issues concerning meaningful comparison with some of the existing methods and results. The authors must design and perform a meaningful comparison study, as suggested by both reviewers. Inadequately addressing the issues could lead to the rejection of the manuscript.
+
+
+Reviewer's Comments
+===================
+
+Reviewer: 1
+
+Comments to the Author
+This paper is an useful paper which presents detection of non-Gaussianity in EEG signals using multivariate scale mixture model for diagnosis of epilepsy. The paper develop a new method for automated detection of epileptic seizures. But, this paper requires some more work before it is suitable for publication in IEEE TBME journal.
+
+1. The paper should compare the obtained classification results with other existing methods and in the literature. The following studied can be used for comparision: □
+
+(1) Seizures classification based on higher order statistics and deep neural network, Biomedical Signal Processing and Control, 2020.
+
+(2) EEG-rhythm specific Taylor-Fourier filter bank implemented with O-splines for the detection of epilepsy using EEG signals, IEEE Sensors Journal, 2020.
+
+(3) Classification of epileptic electroencephalogram signals using tunable-Q wavelet transform based filter-bank, Journal of Ambient Intelligence and Humanized Computing, 2020.
+
+(4) A novel approach for time-frequency localization of scaling functions and design of three-band biorthogonal linear phase wavelet filter banks, Digital Signal Processing, vol. 69, pp. 309-322, October 2017..
+
+(5) Three channel wavelet filter banks with minimal time frequency spread for classification of seizure-free and seizure EEG signals, In: D.S. Sisodia, R.B. Pachori, and L. Garg (Eds.) Handbook
+
+Authors are requested to go through the literature and include some more papers for the comparision purpose.
+
+2. The paper needs to include justification for the selection of number of filters in filter bank. □
+
+3. Please explain computational complexity of the proposed method. □
+
+4. What are the advantages and limitations of the proposed seizure identification method? □
+
+5. Please include some future directions of the presented research work. □
+
+6. Motivation for the presented study is not clear. Please explain. □
+
+Reviewer: 2
+
+Comments to the Author
+The paper is interesting and well written. It addresses an important issue in the research area.
+
+The following comments needs to be addressed before publishing.
+
+1). It would be great if the authors compare with other existing techniques using their recorded EEG data, or test their methodology using a different set of EEG data. □
+2). The references are very old. The latest one is by 2016. □
+
+[TODO]　完了■　未完了□　やりかけ〇
+--- 追加実験 ---
+■オープンデータを用いて提案指標を算出
+　検証1 サンプリング周波数＝173 Hz
+　      データ：409700
+　      窓幅：15 s
+　      ずらし幅：1 s
+        電極数：1ch
+  検証2 サンプリング周波数＝500 Hz
+　      データ：7500
+　      窓幅：15 s
+　      電極数：2ch
+  検証3 サンプリング周波数＝500 Hz
+　      データ：7500
+　      窓幅：15 s
+　      電極数：19ch 
+□実データに対して従来指標を算出？
+ ■RMS
+ ■ToC
+ ■ApEn
+ □周波数？→フィルタバンク通して従来の特徴と比較
+■計算コスト評価実験
+　⇒並列処理をした場合，してない場合にわけて計算時間を算出
+　⇒グラフに描画してわかりやすく表現
+--- 文章・図の追加・修正 ---
+■オープンデータを用いたAUCの比較
+　⇒従来の研究と表で比較
+　⇒結果がいまいちだったためボツ
+----------------------------
+~~ et al.(2020)	method	classifer	accuracy
+----------------------------
+■計算コストについて，横軸：並列数，縦軸：計算時間のグラフを追加
+○Introductionにて，本研究は識別メインではなく，非ガウス性の特徴抽出であることを明確に
+　⇒識別と特徴量を明確に分けて文章を構成する
+　⇒大きく内容を変更する必要はない
+□discussionとconclusionにて，提案法の利点と限界をリッチにする
+　⇒提案法の利点は非ガウス性に着目することで今まで見ることができなかった現象を解明できる
+　⇒限界は非ガウス性のみでは今後，分類が難しい場面も想定されるため，
+　　指標を組みあわせるなどして，対策する
+×オープンデータを通した，従来研究との比較について
+　⇒議論として，識別率が勝つ必要はない
+　⇒提案法は識別器を用いずシンプルな方法で従来の～割程度の分類性能があることを推す
+○研究の動機を明確に示す
+　⇒イントロに，識別の一段階前の特徴量の抽出であることを要に示す

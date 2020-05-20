@@ -1,0 +1,38 @@
+査読コメント
+
+Associate Editor:
+The reviewers have provided positive comments on your manuscript and I concur with them that it has potential high impact in the field. Nonetheless,many clarifications are needed on the methodology, as extensively discussed by the reviewers. 
+Special attention should be paid in better discussing the novelty with respect to your reference [24]. 
+The most novel contributions of the current manuscript with respect to [24] need to be highlighted and also better detailed. 
+
+Reviwer1:
+no comments
+
+Reviwer2:
+Even if some comparative results are shown with Laplacian and Gaussian distributions, a natural comparison should also be a comparison with the method of reference [24]. 
+The main novelty in the methods section relies on the use of the EM algorithm. This part should be more detailed. Where does the formula of eq. (6) come from? An appendix or a litterature reference (maybe [25]) may be added. 
+Which is the convergence or stopping criterion the authors use for the algorithm? What about local minima possibilities? What is the motivation behind the range (0,10) for the initialization step of the dof and scale parameters? 
+To my opinion, the title of the paper is not so easy to understand at first glance and should be made more explicit if possible. 
+
+Remarks: 
+- some reformulations of the last paragraph before section III.B are needed. 
+- section III.B "subsequent trials were performed if the difference in the peak force of the two MVCs was less than 5%": is this correct? 
+- the alpha parameter was chosen in the range 2.5 to 10 and the beta parameter in the range 0.01 to 0.2 whereas the values the real data case are normalized in order to deal with intersubject differences. Because of normalisation, it is thus difficult to make the results in the simulated case useful for the experimental case and it is also not possible to know whether the ranges chosen in the simulated case can be suited for experimental cases. 
+
+・早志論文と比較すべき
+・EMアルゴリズムについてAppendixとかで明記しろ．
+・EMアルゴリズムの収束基準または停止基準はなんだ？
+・推定時のパラメータ初期値の動機は？
+・タイトル分かりにくい．
+・"subsequent trials were performed if the difference in the peak force of the two MVCs was less than 5%" ← これ合ってる？？
+・シミュレーションで用いたα，βの範囲と，今回の計測実験で得られた結果の整合性は？正規化してるから正しいか分からなくね？
+
+Reviwer3:
+The manuscript is about the development and testing of a scale mixture distribution-based stochastic EMG model. 
+The manuscript is well written and organized. 
+The advantages with respect to other existing models and the impact of this work should be better quantified and discussed. 
+For example, authors should clarify what is the impact of the better performances of the fitted distribution obtained using scale mixture with respect to the performances obtained with Laplacian density and Gaussian density shown in Figure 6. 
+On the basis of the AD statistics, authors state that “the scale mixture model enables better fitting to real EMG signals than conventional stochastic EMG models”. 
+Even if this is a statistical result, authors should discuss the real impact of the shown differences (mainly between Laplacian and scale-mixture model). 
+
+・提案法が従来のモデルより優れていることが，実際はどれだけ影響するか（意味があるか），明記する必要があるだろう．

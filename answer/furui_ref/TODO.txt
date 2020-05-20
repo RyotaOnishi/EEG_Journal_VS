@@ -1,0 +1,67 @@
+[Associate Editor]
+1. Special attention should be paid in better discussing the novelty with respect to your reference [24]. 
+2. The most novel contributions of the current manuscript with respect to [24] need to be highlighted and also better detailed. 
+
+[Reviwer #1]
+No comments
+
+[Reviwer #2]
+1. a natural comparison should also be a comparison with the method of reference [24].■済
+2. Which is the convergence or stopping criterion the authors use for the algorithm? ■済
+3. What about local minima possibilities?□
+4. What is the motivation behind the range (0,10) for the initialization step of the dof and scale parameters? ■済
+5. The title of the paper is not so easy to understand at first glance and should be made more explicit if possible.■済
+6. Some reformulations of the last paragraph before section III.B are needed.■済
+7. Section III.B "subsequent trials were performed if the difference in the peak force of the two MVCs was less than 5%": is this correct? ■済
+8. The alpha parameter was chosen in the range 2.5 to 10 and the beta parameter in the range 0.01 to 0.2 whereas the values the real data case are normalized in order to deal with intersubject differences. 
+Because of normalisation, it is thus difficult to make the results in the simulated case useful for the experimental case and it is also not possible to know whether the ranges chosen in the simulated case can be suited for experimental cases. ■済
+
+[Reviwer #3]
+1. The advantages with respect to other existing models and the impact of this work should be better quantified and discussed. ■済
+2. Even if this is a statistical result, authors should discuss the real impact of the shown differences (mainly between Laplacian and scale-mixture model).■済
+
+
+[TODO]　完了■　未完了□　やりかけ〇
+--- 追加実験 ---
+■シミュレーション実験の範囲を変更して結果算出
+　現状: α = 2.5, 3.0, 3.5, ..., 10.0; β = 0.01, 0.02, 0.03, ..., 0.20
+　変更: α = 0.5, 1.0, 1.5, ..., 10.0; β = 0.05, 0.10, 0.15, ..., 1.00
+■解析実験データの整理
+■Hayashi et al.法による適合度検定
+　→ 検定もする．
+■初期値の範囲を色々変えて収束の安定性の検証
+　→本文中には文章で簡単に示す
+　→査読者には初期値の範囲を変えた結果の例を示す
+--- 文章・図の追加・修正 ---
+■シミュレーションのグラフ差し替え
+　→波形例，実験結果
+■適合度検定のグラフ差し替え
+■フィッティング例を追加
+　→横軸とかの調整が面倒
+　→横軸の範囲をデータの±3.SDとかにしちゃう？
+■計測データから推定したパラメータのヒストグラム追加
+　ー＞ggplotを使ってかっこよくしよう
+■EMアルゴリズムの導出を追加
+■推定アルゴリズムの停止 or 収束基準を追加
+　→ Modelではなく実験部に書く？
+■初期値と局所最適解について追記
+　→異なる初期値を選んでも同じ値に収束することは追記．
+　→異なる初期値の範囲については言及してたらキリがない…
+　　→初期値の範囲を広げ，広い範囲の値に対しても一意に解が求まることを書けばOKかな？
+　　→実際の収束結果は査読回答書にのみ記載する？
+■パラメータのヒストグラムについて追記
+　→パラメータが取った上限・下限についても触れる．
+■タイトル変更
+　→ Non-Gaussian surface EMG signals can be described based on a scale mixture model with variance distribution ?
+　→ Non-Gaussian Modelling of Surface EMG Signals Based on a Scale Mixture Model ?
+　→ Non-Gaussian Modelling of Surface EMG Signals Based on a Scale Mixture Model and Analysis of Variance Distribution
+■Section III.B直前のパラグラフを整理 →　途中で変なコンマが入ってた．
+■シミュレーション結果と実データの推定結果との整合性に関する記述を追加
+■Hayshi et alモデルによる比較についてMethodに追記
+　→ previous model でOK？
+　　→ our previous model, scale mixture model with constant $\alpha$ とかもあり？
+■Hayashi et alモデルによる比較結果についてResultおよびdiscussionに追記
+　→また，分散分布パラメータの変化が筋に応じて変化することを新たに発見．
+　　→これが筋ごとに異なる動員戦略を反映している可能性．
+■従来法に対する提案法の特徴およびその影響について考察に追加
+
